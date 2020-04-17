@@ -3,13 +3,13 @@
     <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
         <mat-form-field>
             <input type="email" matInput ngModel name="email" placeholder="Your Email" #emailInput="ngModel" email required>
-            <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty</mat-error>
+            <mat-error *ngIf="emailInput.hasError('required')">Email must not be empty</mat-error>
             <mat-error *ngIf="!emailInput.hasError('required')">E-Mail is invalid</mat-error>
         </mat-form-field>
 
         <mat-form-field>
             <input type="password" matInput ngModel name="password" placeholder="Your Password" #pwInput="ngModel" required>
-            <mat-error>Field must not be empty</mat-error>
+            <mat-error>Password must not be empty</mat-error>
         </mat-form-field>
         <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Login</button>
     </form>
